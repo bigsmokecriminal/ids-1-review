@@ -13,8 +13,8 @@ parser.add_argument("-i", "--input", type=str, help="Input .csv containing the d
 parser.add_argument("-train", type=str, help="Output train set .csv to write the features into or 'console' to console")
 parser.add_argument("-test", type=str, help="Output test set .csv to write the features into or 'console' to console")
 parser.add_argument("-d", "--day", nargs='?', default=None, const=1, type=int, help="Number of days to look back")
-parser.add_argument("--mean", help="mean mode: using manual data statistics to learn features")
-parser.add_argument("--mlp", help="mlp mode: use MLPRegressor to extract features")
+parser.add_argument("--mean", action="store_true", help="mean mode: using manual data statistics to learn features")
+parser.add_argument("--mlp", action="store_true", help="mlp mode: use MLPRegressor to extract features")
 
 
 def main():
